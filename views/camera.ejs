@@ -1,0 +1,216 @@
+<%- include('parts/head1') %>
+
+    <body>
+
+        <!--PreLoader-->
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <!--PreLoader Ends-->
+
+        <!-- header -->
+        <%- include('parts/menu') %>
+            <!-- end search arewa -->
+
+            <!-- breadcrumb-section -->
+            <div class="breadcrumb-section breadcrumb-bg" id="CameraImg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2 text-center">
+                            <div class="breadcrumb-text">
+                                <h1>架設相機</h1>
+                                <p>check here to set your camera</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end breadcrumb section -->
+
+            <!-- contact form -->
+            <% if(session.users){ %>
+            <div class="contact-from-section mt-150 mb-150">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 mb-5 mb-lg-0">
+                            <div class="form-title">
+    
+                                <h2 id="Camera">設定相機</h2>
+                                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ratione! Laboriosam est, assumenda. Perferendis, quo alias quaerat aliquid. Corporis ipsum minus voluptate? Dolore, esse natus!</p> -->
+                            </div>
+                            <div id="form_status"></div>
+
+                            <div class="contact-form">
+                                <!-- <form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
+							<p>
+								<input type="text" placeholder="Name" name="name" id="name">
+								<input type="email" placeholder="Email" name="email" id="email">
+							</p>
+							<p>
+								<input type="tel" placeholder="Phone" name="phone" id="phone">
+								<input type="text" placeholder="Subject" name="subject" id="subject">
+							</p>
+							<p><textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></p>
+							<input type="hidden" name="token" value="FsWga4&@f6aw" />
+							<p><input type="submit" value="Submit"></p>
+						</form> -->
+
+                                <form action="https://nicepage.com/editor/Forms/Process" method="POST"
+                                    class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email"
+                                    name="form" style="padding: 10px;"onsubmit="checkForm();return false">
+                                    <input type="hidden" id="siteId" name="siteId" value="872413">
+                                    <input type="hidden" id="pageId" name="pageId" value="872430">
+                                    <div class="u-form-group u-form-group-1">Time
+                                        <label for="text-1fd3" class="u-form-control-hidden u-label"></label>
+                                        <input type="time" placeholder="time" id="text-1fd3" name="time"
+                                            class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"required="">
+                                    </div>
+                                    <div class="u-form-group u-form-group-1">Angle
+                                        <label for="text-351a" class="u-form-control-hidden u-label"></label>
+                                        <input type="number" placeholder="Angle" id="number" name="angle"
+                                            class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
+                                            min="1" max="179" required="">
+                                    </div>
+                                    <!-- <div class="u-form-group u-form-select u-form-group-3">
+                                        <label for="select-d073" class="u-form-control-hidden u-label"></label>
+                                        <div class="u-form-select-wrapper">Crop
+                                            <select id="select-d073" name="select"
+                                                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                                                <option value="grape">Grape</option>
+                                                <option value="strawberry">Strawberry</option>
+                                                <option value="tomato">Tomato</option>
+                                                <option value="apple">Apple</option>
+                                                <option value="potato">Potato</option>
+                                                <option value="blueberry">Blueberry</option>
+                                                <option value="corn">Corn</option>
+                                                <option value="peach">Peach</option>
+                                                <option value="raspberriest">Raspberriest</option>
+                                                <option value="soybean">Soybean</option>
+                                                <option value="sq">Squash Powdery</option>
+                                                <option value="cherry">Cherry</option>
+                                            </select>
+                                            <div class="d">
+                                                <ul class="fruitUl" style="padding: 0; ">
+                                                    <li><img src="img/grape.jpg" name="grape" alt="grape"></li>
+                                                    <li><img src="img/strawberry.jpg" name="strawberry"
+                                                            alt="strawberry"></li>
+                                                    <li><img src="img/tomato1.png" name="tomato" alt="tomato"></li>
+                                                    <li><img src="img/apples.png" name="apple" alt="apple"></li>
+                                                    <li><img src="img/potato.jpg" name="potato" alt="potato">
+                                                    </li>
+                                                    <li><img src="img/blueberries.png" name="blueberry" alt="blueberry">
+                                                    </li>
+                                                    <li><img src="img/corn.png" name="corn" alt="corn"></li>
+                                                    <li><img src="img/peach.png" name="peach" alt="peach"></li>
+
+                                                    <li><img src="img/raspberriest .png" name="raspberriest"
+                                                            alt="raspberriest"></li>
+                                                    <li><img src="img/soybean.png" name="soybean" alt="soybean"></li>
+                                                    <li><img src="img/sq.png" name="sq" alt="sq"></li>
+                                                    <li><img src="img/cherries .png" name="cherry" alt="cherry"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="u-form-address u-form-group u-form-group-4">Address
+                                        <label for="address-ea1b" class="u-form-control-hidden u-label"></label>
+                                        <input type="text" placeholder="Enter your address" id="address-ea1b"
+                                            name="address"
+                                            class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
+                                            required="">
+                                    </div>
+                                    <div class="u-form-group u-form-group-1">Camera
+                                        <label for="text-351a" class="u-form-control-hidden u-label"></label>
+                                        <input type="number" placeholder="Number of camera you want to apply" id="number" name="camera"
+                                            class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
+                                            min="1" max="10" required="">
+                                    </div>
+                                    <div class="u-align-center u-form-group u-form-submit">
+                                        <a href="javascript:checkForm()"
+                                            class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-radius-50 u-btn-1">設定</a>
+                                        <input type="submit" value="submit" class="u-form-control-hidden">
+                                        <div id="info" class="alert alert-success" role="alert" style="display: none"></div>
+                                        <!-- <a href="/upload"
+                                            class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-radius-50 u-btn-1">Upload</a>
+                                        <input type="submit" value="submit" class="u-form-control-hidden"> -->
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } else { %>
+                <div class="container latest-news pt-150 pb-150">
+                    <div class="col-lg-12 col-md-6">
+                        <div class="news-text-box" style="text-align: center;">
+                            <a href="/login ">
+                                <h2>WELCOME
+                                    <span class="orange-text">BACK</span>
+                                    <h3>請登入
+                                        <i class="green-text fas fa-leaf"></i>
+                                    </h3>
+                                </h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+
+            <!-- footer -->
+            <%- include('parts/footer') %>
+                <!-- end copyright -->
+
+                <!-- jquery -->
+                <%- include('parts/js') %>
+
+                    <script>
+                        $('img').click(function () {
+                            $(this).addClass('selected').parent().siblings().children().removeClass('selected');
+                            $('select').val(this.alt);
+                        });
+                        $('#select-d073').on('change', function () {
+                            // console.log($('#select-d073 option:selected').val());
+                            p = $('#select-d073 option:selected').val()
+                            console.log(p);
+                            $("[alt='" + p + "']").addClass('selected').parent().siblings().children().removeClass('selected');
+                            // console.log(m);
+                            // $('img').attr('alt',$('#select-d073 option:selected').val());
+                            // p.addClass('selected').parent().siblings().children().removeClass('selected');
+                        });
+                        const info = $('#info');
+
+                        function checkForm() {
+                            $.post('', $(document.form).serialize(), function (data) {
+                                console.log(data.error);
+                                if (data.error=='') {
+                                    info.removeClass('alert-danger').addClass('alert-success');
+                                    info.html('設定成功');
+                                    info.slideDown(); // 下拉顯示
+                                    // 新增成功後回到首頁
+                                    setTimeout(function () {
+                                        info.html('3秒後將自動導回首頁');
+                                    }, 2000);
+                                    setTimeout(function () {
+                                        info.slideUp();
+                                        location.href='/';
+                                    }, 5000);
+                                }else{
+                                    info.removeClass('alert-success').addClass('alert-danger');
+                                    info.html(data.error); 
+                                    info.slideDown();
+                                    setTimeout(function () {
+                                        info.slideUp(); // 上捲後隱藏
+                                    }, 3000);
+                                }
+                            });
+                           };
+
+                    </script>
+
+    </body>
+
+    </html>

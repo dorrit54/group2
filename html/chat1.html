@@ -1,0 +1,99 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+    <title>點選文字彈出一個DIV層視窗程式碼</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="public/css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="public/css/owl.carousel.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="public/css/magnific-popup.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="public/css/animate.css">
+    <!-- mean menu css -->
+    <link rel="stylesheet" href="public/css/meanmenu.min.css">
+    <!-- main style -->
+    <link rel="stylesheet" href="public/css/main.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="public/css/responsive.css">
+
+
+    <!-- <style>
+        .black_overlay {
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1001;
+            -moz-opacity: 0.8;
+            opacity: .80;
+            filter: alpha(opacity=88);
+        }
+
+        .white_content {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 55%;
+            height: 55%;
+            padding: 20px;
+            border: 10px solid orange;
+            background-color: white;
+            z-index: 1002;
+            overflow: auto;
+        }
+    </style> -->
+</head>
+
+<body>
+    <div id="chat">
+    <a href="javascript:void(0)"
+        onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+        <i class="fab fa-rocketchat fa-4x"></i></a>
+    </div>
+
+    <div id="light" class="white_content">這是一個層視窗示例程式.
+        <a href="javascript:void(0)"
+            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">點這裡關閉本視窗</a>
+    </div>
+    <div id="fade" class="black_overlay"></div>
+
+    <script src="public/js/jquery-1.11.3.min.js"></script>
+    <!-- bootstrap -->
+    <script src="public/bootstrap/js/bootstrap.min.js"></script>
+    <!-- count down -->
+    <script src="public/js/jquery.countdown.js"></script>
+    <!-- isotope -->
+    <script src="public/js/jquery.isotope-3.0.6.min.js"></script>
+    <!-- waypoints -->
+    <script src="public/js/waypoints.js"></script>
+    <!-- owl carousel -->
+    <script src="public/js/owl.carousel.min.js"></script>
+    <!-- magnific popup -->
+    <script src="public/js/jquery.magnific-popup.min.js"></script>
+    <!-- mean menu -->
+    <script src="public/js/jquery.meanmenu.min.js"></script>
+    <!-- sticker js -->
+    <script src="public/js/sticker.js"></script>
+    <!-- main js -->
+    <script src="public/js/main.js"></script>
+
+</body>
+
+</html>
